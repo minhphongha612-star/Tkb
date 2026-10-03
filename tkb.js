@@ -16,14 +16,6 @@ const db = getDatabase(initializeApp(firebaseConfig));
 const SUBJECTS = ["TN", "ĐP", "Văn", "Hóa", "CN", "Toán", "Anh", "V/lí",
                   "MT", "CD", "Địa", "Sinh", "TD", "Tin", "AN"];
 
-const bang = document.querySelector("table");
-for (let i = 0; i < 5; i++) {
-  const tr = document.createElement("tr");
-  tr.className = "i2";
-  tr.innerHTML = "<td></td><td></td><td></td><td></td><td></td>";
-  bang.appendChild(tr);
-}
-
 document.querySelectorAll(".i2 td").forEach((td, id) => {
   const text = document.createElement("span");
   text.textContent = td.textContent.trim();
@@ -42,7 +34,7 @@ document.querySelectorAll(".i2 td").forEach((td, id) => {
   const menu = document.createElement("div");
   menu.className = "menu";
 
-  const luu = giaTri => set(ref(db, "tkb/o" + id), giaTri);
+  const luu = giaTri => set(ref(db, "tkb2/o" + id), giaTri);
 
   SUBJECTS.forEach(s => {
     const item = document.createElement("div");
@@ -68,7 +60,7 @@ document.querySelectorAll(".i2 td").forEach((td, id) => {
 
   td.append(x, text, tri, menu);
 
-  onValue(ref(db, "tkb/o" + id), snap => {
+  onValue(ref(db, "tkb2/o" + id), snap => {
     if (snap.exists()) text.textContent = snap.val();
   });
 });

@@ -1,22 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 4px;
+  width: 100%;
+}
+
+th, td {
+  border: 2px solid;
+  border-radius: 8px;
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
+  animation: dc 2s linear infinite alternate;
+}
+
 .i th {
-  background-color: red;
-  padding: 20px 40px;
-  font-size: 30px;
-  border-radius: 10px;
-  animation: dc 2s linear infinite alternate;
-  border: 2px solid;
-  color: rgb(0, 238, 255);
+  background: #f0f0f0;
+  color: #222;
 }
+
+.i2 th {
+  background: #f0f0f0;
+  color: #222;
+  min-width: 70px;
+}
+
+.chieu th {
+  background: #333;
+  color: #fff;
+  height: 40px;
+}
+
 .i2 td {
-  background-color: white;
-  padding: 20px 40px;
-  font-size: 30px;
-  border-radius: 10px;
-  animation: dc 2s linear infinite alternate;
-  border: 2px solid;
-  color: rgb(255, 0, 0);
+  background: #fff;
+  color: #d00000;
   position: relative;
+  padding: 4px 28px;
 }
+
 @keyframes dc {
   0%   { border-color: yellow; }
   25%  { border-color: greenyellow; }
@@ -32,12 +57,12 @@
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 2px 4px;
 }
-.btn-x   { left: 4px;  color: #000; font-weight: bold; }
-.btn-tri { right: 4px; color: #333; }
-.btn-x:hover, .btn-tri:hover { background: #ddd; }
+.btn-x   { left: 2px;  color: #000; font-weight: bold; }
+.btn-tri { right: 2px; color: #333; }
+.btn-x:hover, .btn-tri:hover { background: #e5e5e5; }
 
 .menu {
   display: none;
@@ -47,12 +72,12 @@
   z-index: 10;
   background: #fff;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
-  min-width: 120px;
+  min-width: 110px;
   border: 1px solid #666;
-  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
 }
 .menu.show { display: block; }
-.menu div { padding: 6px 12px; cursor: pointer; }
+.menu div { padding: 6px 10px; cursor: pointer; }
 .menu div:hover { background: #cfe8ff; }
