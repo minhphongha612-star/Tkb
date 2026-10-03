@@ -1,0 +1,58 @@
+.i th {
+  background-color: red;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  animation: dc 2s linear infinite alternate;
+  border: 2px solid;
+  color: rgb(0, 238, 255);
+}
+.i2 td {
+  background-color: white;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  animation: dc 2s linear infinite alternate;
+  border: 2px solid;
+  color: rgb(255, 0, 0);
+  position: relative;
+}
+@keyframes dc {
+  0%   { border-color: yellow; }
+  25%  { border-color: greenyellow; }
+  50%  { border-color: blue; }
+  75%  { border-color: red; }
+  100% { border-color: orangered; }
+}
+
+.btn-x, .btn-tri {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 4px;
+}
+.btn-x   { left: 4px;  color: #000; font-weight: bold; }
+.btn-tri { right: 4px; color: #333; }
+.btn-x:hover, .btn-tri:hover { background: #ddd; }
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  text-align: left;
+  min-width: 120px;
+  border: 1px solid #666;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.menu.show { display: block; }
+.menu div { padding: 6px 12px; cursor: pointer; }
+.menu div:hover { background: #cfe8ff; }
