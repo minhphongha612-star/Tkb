@@ -3,6 +3,32 @@ body {
   padding: 20px;
 }
 
+.mode-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#mode { color: #555; }
+body.admin #mode { color: #0a8a0a; }
+.mode-bar input {
+  font-size: 16px;
+  padding: 6px 8px;
+  width: 150px;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+.mode-bar button {
+  font-size: 16px;
+  padding: 6px 14px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
 table {
   border-collapse: separate;
   border-spacing: 4px;
@@ -39,6 +65,9 @@ th, td {
   background: #fff;
   color: #d00000;
   position: relative;
+  padding: 4px 10px;
+}
+body.admin .i2 td {
   padding: 4px 28px;
 }
 
@@ -51,6 +80,7 @@ th, td {
 }
 
 .btn-x, .btn-tri {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -60,6 +90,7 @@ th, td {
   font-size: 14px;
   padding: 2px 4px;
 }
+body.admin .btn-x, body.admin .btn-tri { display: block; }
 .btn-x   { left: 2px;  color: #000; font-weight: bold; }
 .btn-tri { right: 2px; color: #333; }
 .btn-x:hover, .btn-tri:hover { background: #e5e5e5; }
