@@ -14,7 +14,7 @@ const firebaseConfig = {
 const db = getDatabase(initializeApp(firebaseConfig));
 
 const SUBJECTS = ["TN", "ĐP", "Văn", "Hóa", "CN", "Toán", "Anh", "V/lí",
-                  "MT", "CD", "Địa", "Sinh", "TD", "Tin", "AN"];
+                  "MT", "CD", "Địa", "Sinh", "TD", "Tin", "AN", "Sử"];
 
 document.querySelectorAll(".i2 td").forEach((td, id) => {
   const text = document.createElement("span");
